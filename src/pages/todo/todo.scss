@@ -1,0 +1,9 @@
+page-todo {
+    $break-large: 900px;
+
+    .todo-list {
+        @media screen and (min-width: $break-large) {
+            max-width: 600px;
+        }
+    }
+}
