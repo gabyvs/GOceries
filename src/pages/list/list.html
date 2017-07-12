@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>GOceries</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid class="shopping-list">
+        <ion-list>
+            <ion-row *ngFor="let item of items">
+                <ion-col>
+                    <ion-item>
+                        {{ item }}
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-input #newItem type="text"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-around>
+            <ion-col col-auto>
+                <button ion-button (click)="add(newItem.value); newItem.value = ''">Add</button>
+                <button ion-button color="light" (click)="clear()">Clear</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
